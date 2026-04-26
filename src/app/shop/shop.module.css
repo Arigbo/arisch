@@ -1,0 +1,34 @@
+.shop {
+  padding: 6rem 0;
+}
+
+.shopHeader {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.filterBtn {
+  background: var(--accent);
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.filterBtn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}

@@ -1,0 +1,97 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  padding: 2.5rem;
+  background: var(--background);
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.productInfo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.imageWrapper {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.productInfo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.selection {
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--accent);
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+}
+
+.controls input {
+  flex: 1;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+}

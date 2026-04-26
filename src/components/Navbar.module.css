@@ -1,0 +1,227 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navLinks a {
+  font-weight: 500;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.navLinks a:hover {
+  color: var(--primary);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cartTrigger {
+  position: relative;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.cartDrawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: var(--background);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  transition: var(--transition);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartDrawer.open {
+  right: 0;
+}
+
+.drawerHeader {
+  padding: 2rem;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawerHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.drawerContent {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.emptyMsg {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 4rem;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.itemName {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.quantityControls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: var(--accent);
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.quantityControls span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.itemPrice {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.removeBtn {
+  background: none;
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.drawerFooter {
+  padding: 2rem;
+  border-top: 1px solid var(--accent);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.clearBtn {
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 1050;
+  backdrop-filter: blur(4px);
+}
+
+.menuTrigger {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+@media (max-width: 992px) {
+  .menuTrigger {
+    display: block;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--background);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    transform: translateX(-100%);
+    transition: var(--transition);
+    z-index: 900;
+  }
+
+  .navLinks.menuOpen {
+    transform: translateX(0);
+  }
+
+  .cartDrawer {
+    width: 100%;
+    right: -100%;
+  }
+}

@@ -1,0 +1,100 @@
+.contact {
+  padding: 6rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.inputGroup input, .inputGroup textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--background);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+}
+
+.infoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.infoItem span {
+  font-size: 1.5rem;
+}
+
+.infoItem h4 {
+  margin-bottom: 0.25rem;
+}
+
+.infoItem p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.successMsg {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.successMsg h2 {
+  margin-bottom: 1rem;
+}
+
+.successMsg p {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
